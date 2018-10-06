@@ -62,8 +62,8 @@ async def poll(ctx, *, arg):
     await ctx.message.delete()
     embed = discord.Embed(title=ctx.author.name+"#"+str(ctx.author.discriminator), description=arg, color=0x006400)
     message = await ctx.send(embed=embed)
-    good = bot.get_emoji(459261324254380032)
-    bad = bot.get_emoji(380113459922206720)
+    good = bot.get_emoji(432728581400166402)
+    bad = bot.get_emoji(430179754985914389)
     await message.add_reaction(good)
     await message.add_reaction(bad)
 
