@@ -60,7 +60,8 @@ Headspace: <https://www.headspace.org.au/>
 @bot.command()
 async def poll(ctx, *, arg):
     await ctx.message.delete()
-    embed = discord.Embed(title=ctx.author.name+"#"+str(ctx.author.discriminator), description=arg, color=0x006400)
+    embed = discord.Embed(description=arg, color=0x006400)
+    embed.set_author(f"{ctx.author.name}#{ctx.author.discriminator}", icon_url=ctx.author.avatar_url)
     message = await ctx.send(embed=embed)
     good = bot.get_emoji(498003199102418944)
     bad = bot.get_emoji(498003199257477120)
